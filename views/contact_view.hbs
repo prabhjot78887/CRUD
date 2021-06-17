@@ -1,0 +1,33 @@
+<a href="http://localhost:8000/contactadd">Add New Contact</a>
+<hr>
+<table>
+    <thread>
+        <tr>
+            
+            <th>
+            Person Name
+            </th>
+            <th>
+                Contact Number
+            </th>
+           
+        </tr>
+    </thread>
+    <tbody>
+        {{#each results}}
+        <tr>
+            
+            <td>
+                {{person_name}}
+            </td>
+            <td>
+                {{contact_number}}
+            </td>
+            <td>
+                <a href ="http://localhost:8000/contactdelete/{{person_name}}">  Delete</a>
+                <a href ="http://localhost:8000/contactedit/{{person_name}}">   Edit</a>
+            </td>
+        </tr>
+{{/each}}
+    </tbody>
+</table>
